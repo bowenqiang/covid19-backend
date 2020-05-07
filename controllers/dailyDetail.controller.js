@@ -20,7 +20,6 @@ exports.findHistoryData = (req, res) => {
     }
     if (query.Country === "Global") {
         delete query["Country"];
-        Global.createCollection();
         Global.find(query)
         .then(data => {
             if (!data) {

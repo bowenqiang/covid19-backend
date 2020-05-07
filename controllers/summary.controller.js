@@ -46,17 +46,17 @@ exports.getSummary = (req, res) => {
     }
 };
 
-exports.test = (req, res) => {
-    DailyDetail.find()
-    .then(data => {
-      if (!data) {
-          res.status(404).send({ message: ``});
-      }
-      else {
-          res.send(data);
-      }
-    })
-    .catch(err => {
+// exports.template = (req, res) => {
+//     DailyDetail.find()
+//     .then(data => {
+//       if (!data) {
+//           res.status(404).send({ message: ``});
+//       }
+//       else {
+//           res.send(data);
+//       }
+//     })
+//     .catch(err => {
   
-    })
-};
+//     })
+// };

@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const { updateDatabase } = require('./schedule/schedule.task');
 
 const app = express();
 
@@ -39,6 +40,10 @@ app.get("/", (req, res) => {
 require("./routes/countryRef.routes")(app);
 require("./routes/dailyDetail.routes")(app);
 require("./routes/summary.routes")(app);
+
+//schedule tasks
+updateDatabase();
+
 
 const PORT = process.env.PORT || 4041;
 app.listen(PORT, () => {

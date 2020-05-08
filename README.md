@@ -14,3 +14,5 @@ To create docker image, you can run:
 
 To run the app in docker. <br />
 ### `docker run -p 4041:4041 -d <your tag>`
+
+Try http://home.link2awesome.ml:4041

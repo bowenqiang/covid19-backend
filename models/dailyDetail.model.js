@@ -9,6 +9,10 @@ module.exports = mongoose => {
         }
     );
 
+    schema.statics.lastUpdate = function() {
+        return this.find({}).sort('-Date').limit(1);
+    }
+
     const DailyDetail = mongoose.model("dailyDetail", schema);
     return DailyDetail;
 };
